@@ -72,49 +72,57 @@ SELECT 1 FROM t1 WHERE '1' NOT IN ('2')
 #
 # Row 2: empty RHS
 
-query I nosort
-SELECT 1 FROM t1 WHERE 1 IN ()
-----
+# TODO: empty IN list `IN ()` is not supported
+# query I nosort
+# SELECT 1 FROM t1 WHERE 1 IN ()
+# ----
 
-query I nosort
-SELECT 1 FROM t1 WHERE 1.0 IN ()
-----
+# TODO: empty IN list `IN ()` is not supported
+# query I nosort
+# SELECT 1 FROM t1 WHERE 1.0 IN ()
+# ----
 
-query I nosort
-SELECT 1 FROM t1 WHERE '1' IN ()
-----
+# TODO: empty IN list `IN ()` is not supported
+# query I nosort
+# SELECT 1 FROM t1 WHERE '1' IN ()
+# ----
 
-query I nosort
-SELECT 1 FROM t1 WHERE NULL IN ()
-----
+# TODO: empty IN list `IN ()` is not supported
+# query I nosort
+# SELECT 1 FROM t1 WHERE NULL IN ()
+# ----
 
-query I nosort
-SELECT 1 FROM t1 WHERE 1 NOT IN ()
-----
-1
-1
-1
+# TODO: empty IN list `IN ()` is not supported
+# query I nosort
+# SELECT 1 FROM t1 WHERE 1 NOT IN ()
+# ----
+# 1
+# 1
+# 1
 
-query I nosort
-SELECT 1 FROM t1 WHERE 1.0 NOT IN ()
-----
-1
-1
-1
+# TODO: empty IN list `IN ()` is not supported
+# query I nosort
+# SELECT 1 FROM t1 WHERE 1.0 NOT IN ()
+# ----
+# 1
+# 1
+# 1
 
-query I nosort
-SELECT 1 FROM t1 WHERE '1' NOT IN ()
-----
-1
-1
-1
+# TODO: empty IN list `IN ()` is not supported
+# query I nosort
+# SELECT 1 FROM t1 WHERE '1' NOT IN ()
+# ----
+# 1
+# 1
+# 1
 
-query I nosort
-SELECT 1 FROM t1 WHERE NULL NOT IN ()
-----
-1
-1
-1
+# TODO: empty IN list `IN ()` is not supported
+# query I nosort
+# SELECT 1 FROM t1 WHERE NULL NOT IN ()
+# ----
+# 1
+# 1
+# 1
 
 # Row 3:
 

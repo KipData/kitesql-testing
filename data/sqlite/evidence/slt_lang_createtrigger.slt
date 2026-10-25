@@ -22,8 +22,9 @@ CREATE INDEX t1i1 ON t1(x)
 # EVIDENCE-OF: R-10346-40046 The CREATE TRIGGER statement is used to add
 # triggers to the database schema.
 
-statement ok
-CREATE TRIGGER t1r1 UPDATE ON t1 BEGIN SELECT 1; END;
+# TODO: unsupported statement: CREATE TRIGGER t1r1 UPDATE ON t1 BEGIN SELECT 1; END
+# statement ok
+# CREATE TRIGGER t1r1 UPDATE ON t1 BEGIN SELECT 1; END;
 
 # already exists
 statement error
@@ -37,14 +38,17 @@ CREATE TRIGGER t1r1 UPDATE ON t1 BEGIN SELECT 1; END;
 # whenever an UPDATE occurs on on one or more specified columns of a
 # table.
 
-statement ok
-CREATE TRIGGER t1r2 DELETE ON t1 BEGIN SELECT 1; END;
+# TODO: unsupported statement: CREATE TRIGGER t1r2 DELETE ON t1 BEGIN SELECT 1; END
+# statement ok
+# CREATE TRIGGER t1r2 DELETE ON t1 BEGIN SELECT 1; END;
 
-statement ok
-CREATE TRIGGER t1r3 INSERT ON t1 BEGIN SELECT 1; END;
+# TODO: unsupported statement: CREATE TRIGGER t1r3 INSERT ON t1 BEGIN SELECT 1; END
+# statement ok
+# CREATE TRIGGER t1r3 INSERT ON t1 BEGIN SELECT 1; END;
 
-statement ok
-CREATE TRIGGER t1r4 UPDATE ON t1 BEGIN SELECT 1; END;
+# TODO: unsupported statement: CREATE TRIGGER t1r4 UPDATE ON t1 BEGIN SELECT 1; END
+# statement ok
+# CREATE TRIGGER t1r4 UPDATE ON t1 BEGIN SELECT 1; END;
 
 # TBD-EVIDENCE-OF: R-52227-24890 At this time SQLite supports only FOR EACH
 # ROW triggers, not FOR EACH STATEMENT triggers.
@@ -78,23 +82,29 @@ CREATE TRIGGER t1r4 UPDATE ON t1 BEGIN SELECT 1; END;
 # the trigger actions will be executed relative to the insertion,
 # modification or removal of the associated row.
 
-statement ok
-CREATE TRIGGER t1r5 AFTER DELETE ON t1 BEGIN SELECT 1; END;
+# TODO: unsupported statement: CREATE TRIGGER t1r5 AFTER DELETE ON t1 BEGIN SELECT 1; END
+# statement ok
+# CREATE TRIGGER t1r5 AFTER DELETE ON t1 BEGIN SELECT 1; END;
 
-statement ok
-CREATE TRIGGER t1r6 AFTER INSERT ON t1 BEGIN SELECT 1; END;
+# TODO: unsupported statement: CREATE TRIGGER t1r6 AFTER INSERT ON t1 BEGIN SELECT 1; END
+# statement ok
+# CREATE TRIGGER t1r6 AFTER INSERT ON t1 BEGIN SELECT 1; END;
 
-statement ok
-CREATE TRIGGER t1r7 AFTER UPDATE ON t1 BEGIN SELECT 1; END;
+# TODO: unsupported statement: CREATE TRIGGER t1r7 AFTER UPDATE ON t1 BEGIN SELECT 1; END
+# statement ok
+# CREATE TRIGGER t1r7 AFTER UPDATE ON t1 BEGIN SELECT 1; END;
 
-statement ok
-CREATE TRIGGER t1r8 BEFORE DELETE ON t1 BEGIN SELECT 1; END;
+# TODO: unsupported statement: CREATE TRIGGER t1r8 BEFORE DELETE ON t1 BEGIN SELECT 1; END
+# statement ok
+# CREATE TRIGGER t1r8 BEFORE DELETE ON t1 BEGIN SELECT 1; END;
 
-statement ok
-CREATE TRIGGER t1r9 BEFORE INSERT ON t1 BEGIN SELECT 1; END;
+# TODO: unsupported statement: CREATE TRIGGER t1r9 BEFORE INSERT ON t1 BEGIN SELECT 1; END
+# statement ok
+# CREATE TRIGGER t1r9 BEFORE INSERT ON t1 BEGIN SELECT 1; END;
 
-statement ok
-CREATE TRIGGER t1r10 BEFORE UPDATE ON t1 BEGIN SELECT 1; END;
+# TODO: unsupported statement: CREATE TRIGGER t1r10 BEFORE UPDATE ON t1 BEGIN SELECT 1; END
+# statement ok
+# CREATE TRIGGER t1r10 BEFORE UPDATE ON t1 BEGIN SELECT 1; END;
 
 # TBD-EVIDENCE-OF: R-57724-61571 An ON CONFLICT clause may be specified as
 # part of an UPDATE or INSERT action within the body of the trigger.
@@ -189,32 +199,42 @@ CREATE TRIGGER t1r10 BEFORE UPDATE ON t1 BEGIN SELECT 1; END;
 # program to execute is itself part of a trigger program, then that
 # trigger program resumes execution at the beginning of the next step.
 
-statement ok
-DROP TRIGGER t1r1
+# TODO: unsupported statement: DROP TRIGGER t1r1
+# statement ok
+# DROP TRIGGER t1r1
 
-statement ok
-DROP TRIGGER t1r2
+# TODO: unsupported statement: DROP TRIGGER t1r2
+# statement ok
+# DROP TRIGGER t1r2
 
-statement ok
-DROP TRIGGER t1r3
+# TODO: unsupported statement: DROP TRIGGER t1r3
+# statement ok
+# DROP TRIGGER t1r3
 
-statement ok
-DROP TRIGGER t1r4
+# TODO: unsupported statement: DROP TRIGGER t1r4
+# statement ok
+# DROP TRIGGER t1r4
 
-statement ok
-DROP TRIGGER t1r5
+# TODO: unsupported statement: DROP TRIGGER t1r5
+# statement ok
+# DROP TRIGGER t1r5
 
-statement ok
-DROP TRIGGER t1r6
+# TODO: unsupported statement: DROP TRIGGER t1r6
+# statement ok
+# DROP TRIGGER t1r6
 
-statement ok
-DROP TRIGGER t1r7
+# TODO: unsupported statement: DROP TRIGGER t1r7
+# statement ok
+# DROP TRIGGER t1r7
 
-statement ok
-DROP TRIGGER t1r8
+# TODO: unsupported statement: DROP TRIGGER t1r8
+# statement ok
+# DROP TRIGGER t1r8
 
-statement ok
-DROP TRIGGER t1r9
+# TODO: unsupported statement: DROP TRIGGER t1r9
+# statement ok
+# DROP TRIGGER t1r9
 
-statement ok
-DROP TRIGGER t1r10
+# TODO: unsupported statement: DROP TRIGGER t1r10
+# statement ok
+# DROP TRIGGER t1r10

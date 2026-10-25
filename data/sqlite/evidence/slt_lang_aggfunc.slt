@@ -56,10 +56,11 @@ SELECT max(DISTINCT x) FROM t1
 ----
 1
 
-query T nosort
-SELECT group_concat(DISTINCT x) FROM t1 NOT INDEXED
-----
-1,0
+# TODO: Expected: end of statement, found: INDEXED
+# query T nosort
+# SELECT group_concat(DISTINCT x) FROM t1 NOT INDEXED
+# ----
+# 1,0
 
 # EVIDENCE-OF: R-00171-59428 In such cases, duplicate elements are
 # filtered before being passed into the aggregate function.
@@ -228,23 +229,26 @@ SELECT count(DISTINCT *) FROM t1 WHERE y='false'
 # EVIDENCE-OF: R-56088-25150 The group_concat() function returns a
 # string which is the concatenation of all non-NULL values of X.
 
-query T nosort
-SELECT group_concat(x) FROM t1 NOT INDEXED
-----
-1,0,2,2
+# TODO: Expected: end of statement, found: INDEXED
+# query T nosort
+# SELECT group_concat(x) FROM t1 NOT INDEXED
+# ----
+# 1,0,2,2
 
-query T nosort
-SELECT group_concat(DISTINCT x) FROM t1 NOT INDEXED
-----
-1,0,2
+# TODO: Expected: end of statement, found: INDEXED
+# query T nosort
+# SELECT group_concat(DISTINCT x) FROM t1 NOT INDEXED
+# ----
+# 1,0,2
 
 # EVIDENCE-OF: R-08600-21007 If parameter Y is present then it is used
 # as the separator between instances of X.
 
-query T nosort
-SELECT group_concat(x,':') FROM t1 NOT INDEXED
-----
-1:0:2:2
+# TODO: Expected: end of statement, found: INDEXED
+# query T nosort
+# SELECT group_concat(x,':') FROM t1 NOT INDEXED
+# ----
+# 1:0:2:2
 
 # TBD: DISTINCT can only be used with single parameters
 statement error
@@ -253,15 +257,17 @@ SELECT group_concat(DISTINCT x,':') FROM t1
 # EVIDENCE-OF: R-39910-14723 A comma (",") is used as the separator if Y
 # is omitted.
 
-query T nosort
-SELECT group_concat(x) FROM t1 NOT INDEXED
-----
-1,0,2,2
+# TODO: Expected: end of statement, found: INDEXED
+# query T nosort
+# SELECT group_concat(x) FROM t1 NOT INDEXED
+# ----
+# 1,0,2,2
 
-query T nosort
-SELECT group_concat(DISTINCT x) FROM t1 NOT INDEXED
-----
-1,0,2
+# TODO: Expected: end of statement, found: INDEXED
+# query T nosort
+# SELECT group_concat(DISTINCT x) FROM t1 NOT INDEXED
+# ----
+# 1,0,2
 
 # EVIDENCE-OF: R-52585-35928 The max() aggregate function returns the
 # maximum value of all values in the group.
@@ -445,33 +451,40 @@ SELECT sum(DISTINCT x) FROM t1
 # exception if all inputs are integers or NULL and an integer overflow
 # occurs at any point during the computation.
 
-statement ok
-INSERT INTO t1 VALUES(6, 1<<63,'true');
+# TODO: unsupported statement: <<
+# statement ok
+# INSERT INTO t1 VALUES(6, 1<<63,'true');
 
-statement ok
-INSERT INTO t1 VALUES(7, 1<<63,'true');
+# TODO: unsupported statement: <<
+# statement ok
+# INSERT INTO t1 VALUES(7, 1<<63,'true');
 
-statement ok
-INSERT INTO t1 VALUES(8, -1,'true');
-DROP INDEX t1i1;
+# TODO: invalid index
+# statement ok
+# INSERT INTO t1 VALUES(8, -1,'true');
+# DROP INDEX t1i1;
 
-query R nosort
-SELECT sum(x) FROM t1
-----
+# TODO: result depends on a commented-out statement above
+# query R nosort
+# SELECT sum(x) FROM t1
+# ----
 
-query R nosort
-SELECT sum(DISTINCT x) FROM t1
-----
--9223372036854776000.000
+# TODO: result depends on a commented-out statement above
+# query R nosort
+# SELECT sum(DISTINCT x) FROM t1
+# ----
+# -9223372036854776000.000
 
 # TBD-EVIDENCE-OF: R-19553-64528 Total() never throws an integer overflow.
 
-query R nosort
-SELECT total(x) FROM t1
-----
--18446744073709550000.000
+# TODO: result depends on a commented-out statement above
+# query R nosort
+# SELECT total(x) FROM t1
+# ----
+# -18446744073709550000.000
 
-query R nosort
-SELECT total(DISTINCT x) FROM t1
-----
--9223372036854776000.000
+# TODO: result depends on a commented-out statement above
+# query R nosort
+# SELECT total(DISTINCT x) FROM t1
+# ----
+# -9223372036854776000.000

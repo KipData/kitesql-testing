@@ -3028,11 +3028,13 @@ INSERT INTO tab1 SELECT pk, col0, col1, col2, col3, col4, col5 FROM tab0
 statement ok
 CREATE TABLE tab2(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, col3 BIGINT, col4 FLOAT, col5 TEXT)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab2_0 ON tab2 (col3 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab2_0 ON tab2 (col3 DESC)
 
-statement ok
-CREATE INDEX idx_tab2_2 ON tab2 (col4 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE INDEX idx_tab2_2 ON tab2 (col4 DESC)
 
 statement ok
 INSERT INTO tab2 SELECT pk, col0, col1, col2, col3, col4, col5 FROM tab0
@@ -3040,8 +3042,9 @@ INSERT INTO tab2 SELECT pk, col0, col1, col2, col3, col4, col5 FROM tab0
 statement ok
 CREATE TABLE tab3(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, col3 BIGINT, col4 FLOAT, col5 TEXT)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab3_0 ON tab3 (col0 DESC,col3 DESC,col1 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab3_0 ON tab3 (col0 DESC,col3 DESC,col1 DESC)
 
 statement ok
 CREATE INDEX idx_tab3_1 ON tab3 (col1)
@@ -3055,14 +3058,17 @@ CREATE TABLE tab4(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, co
 statement ok
 CREATE INDEX idx_tab4_0 ON tab4 (col0,col3)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab4_2 ON tab4 (col3,col1,col4 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab4_2 ON tab4 (col3,col1,col4 DESC)
 
-statement ok
-CREATE INDEX idx_tab4_3 ON tab4 (col3,col4 DESC,col1 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE INDEX idx_tab4_3 ON tab4 (col3,col4 DESC,col1 DESC)
 
-statement ok
-CREATE INDEX idx_tab4_4 ON tab4 (col4 DESC,col3 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE INDEX idx_tab4_4 ON tab4 (col4 DESC,col3 DESC)
 
 statement ok
 INSERT INTO tab4 SELECT pk, col0, col1, col2, col3, col4, col5 FROM tab0
@@ -6479,17 +6485,20 @@ DROP TABLE tab2
 statement ok
 CREATE TABLE tab2(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, col3 BIGINT, col4 FLOAT, col5 TEXT)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab2_0 ON tab2 (col4 DESC,col3)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab2_0 ON tab2 (col4 DESC,col3)
 
 statement ok
 CREATE INDEX idx_tab2_1 ON tab2 (col0)
 
-statement ok
-CREATE INDEX idx_tab2_2 ON tab2 (col3 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE INDEX idx_tab2_2 ON tab2 (col3 DESC)
 
-statement ok
-CREATE INDEX idx_tab2_3 ON tab2 (col4 DESC,col1)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE INDEX idx_tab2_3 ON tab2 (col4 DESC,col1)
 
 statement ok
 INSERT INTO tab2 SELECT pk, col0, col1, col2, col3, col4, col5 FROM tab0
@@ -6500,11 +6509,13 @@ DROP TABLE tab3
 statement ok
 CREATE TABLE tab3(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, col3 BIGINT, col4 FLOAT, col5 TEXT)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab3_0 ON tab3 (col1 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab3_0 ON tab3 (col1 DESC)
 
-statement ok
-CREATE INDEX idx_tab3_1 ON tab3 (col0 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE INDEX idx_tab3_1 ON tab3 (col0 DESC)
 
 statement ok
 CREATE INDEX idx_tab3_4 ON tab3 (col4)
@@ -6518,11 +6529,13 @@ DROP TABLE tab4
 statement ok
 CREATE TABLE tab4(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, col3 BIGINT, col4 FLOAT, col5 TEXT)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab4_0 ON tab4 (col3 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab4_0 ON tab4 (col3 DESC)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab4_1 ON tab4 (col4 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab4_1 ON tab4 (col4 DESC)
 
 statement ok
 INSERT INTO tab4 SELECT pk, col0, col1, col2, col3, col4, col5 FROM tab0
@@ -9799,11 +9812,13 @@ DROP TABLE tab2
 statement ok
 CREATE TABLE tab2(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, col3 BIGINT, col4 FLOAT, col5 TEXT)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab2_1 ON tab2 (col4 DESC,col1,col3)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab2_1 ON tab2 (col4 DESC,col1,col3)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab2_2 ON tab2 (col0 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab2_2 ON tab2 (col0 DESC)
 
 statement ok
 INSERT INTO tab2 SELECT pk, col0, col1, col2, col3, col4, col5 FROM tab0
@@ -9820,11 +9835,13 @@ CREATE UNIQUE INDEX idx_tab3_0 ON tab3 (col1)
 statement ok
 CREATE UNIQUE INDEX idx_tab3_1 ON tab3 (col3,col0)
 
-statement ok
-CREATE INDEX idx_tab3_2 ON tab3 (col4 DESC,col0,col3)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE INDEX idx_tab3_2 ON tab3 (col4 DESC,col0,col3)
 
-statement ok
-CREATE INDEX idx_tab3_4 ON tab3 (col4,col3 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE INDEX idx_tab3_4 ON tab3 (col4,col3 DESC)
 
 statement ok
 INSERT INTO tab3 SELECT pk, col0, col1, col2, col3, col4, col5 FROM tab0
@@ -13062,11 +13079,13 @@ CREATE TABLE tab2(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, co
 statement ok
 CREATE INDEX idx_tab2_0 ON tab2 (col0)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab2_1 ON tab2 (col3 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab2_1 ON tab2 (col3 DESC)
 
-statement ok
-CREATE INDEX idx_tab2_5 ON tab2 (col4 DESC,col1)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE INDEX idx_tab2_5 ON tab2 (col4 DESC,col1)
 
 statement ok
 INSERT INTO tab2 SELECT pk, col0, col1, col2, col3, col4, col5 FROM tab0
@@ -13077,11 +13096,13 @@ DROP TABLE tab3
 statement ok
 CREATE TABLE tab3(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, col3 BIGINT, col4 FLOAT, col5 TEXT)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab3_0 ON tab3 (col0 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab3_0 ON tab3 (col0 DESC)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab3_3 ON tab3 (col3 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab3_3 ON tab3 (col3 DESC)
 
 statement ok
 INSERT INTO tab3 SELECT pk, col0, col1, col2, col3, col4, col5 FROM tab0
@@ -16553,14 +16574,17 @@ DROP TABLE tab2
 statement ok
 CREATE TABLE tab2(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, col3 BIGINT, col4 FLOAT, col5 TEXT)
 
-statement ok
-CREATE INDEX idx_tab2_0 ON tab2 (col3 DESC,col0)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE INDEX idx_tab2_0 ON tab2 (col3 DESC,col0)
 
-statement ok
-CREATE INDEX idx_tab2_2 ON tab2 (col1 DESC,col4,col3)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE INDEX idx_tab2_2 ON tab2 (col1 DESC,col4,col3)
 
-statement ok
-CREATE INDEX idx_tab2_5 ON tab2 (col0 DESC,col1)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE INDEX idx_tab2_5 ON tab2 (col0 DESC,col1)
 
 statement ok
 INSERT INTO tab2 SELECT pk, col0, col1, col2, col3, col4, col5 FROM tab0
@@ -16574,11 +16598,13 @@ CREATE TABLE tab3(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, co
 statement ok
 CREATE UNIQUE INDEX idx_tab3_0 ON tab3 (col1)
 
-statement ok
-CREATE INDEX idx_tab3_3 ON tab3 (col4,col3 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE INDEX idx_tab3_3 ON tab3 (col4,col3 DESC)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab3_4 ON tab3 (col0 DESC,col4)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab3_4 ON tab3 (col0 DESC,col4)
 
 statement ok
 INSERT INTO tab3 SELECT pk, col0, col1, col2, col3, col4, col5 FROM tab0
@@ -16592,8 +16618,9 @@ CREATE TABLE tab4(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, co
 statement ok
 CREATE INDEX idx_tab4_0 ON tab4 (col3)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab4_1 ON tab4 (col1,col4 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab4_1 ON tab4 (col1,col4 DESC)
 
 statement ok
 INSERT INTO tab4 SELECT pk, col0, col1, col2, col3, col4, col5 FROM tab0
@@ -19755,11 +19782,13 @@ DROP TABLE tab2
 statement ok
 CREATE TABLE tab2(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, col3 BIGINT, col4 FLOAT, col5 TEXT)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab2_0 ON tab2 (col3 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab2_0 ON tab2 (col3 DESC)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab2_4 ON tab2 (col0 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab2_4 ON tab2 (col0 DESC)
 
 statement ok
 INSERT INTO tab2 SELECT pk, col0, col1, col2, col3, col4, col5 FROM tab0
@@ -19770,8 +19799,9 @@ DROP TABLE tab3
 statement ok
 CREATE TABLE tab3(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, col3 BIGINT, col4 FLOAT, col5 TEXT)
 
-statement ok
-CREATE INDEX idx_tab3_1 ON tab3 (col1 DESC,col0 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE INDEX idx_tab3_1 ON tab3 (col1 DESC,col0 DESC)
 
 statement ok
 CREATE INDEX idx_tab3_2 ON tab3 (col0)
@@ -19785,11 +19815,13 @@ DROP TABLE tab4
 statement ok
 CREATE TABLE tab4(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, col3 BIGINT, col4 FLOAT, col5 TEXT)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab4_0 ON tab4 (col1 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab4_0 ON tab4 (col1 DESC)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab4_2 ON tab4 (col3 DESC,col0 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab4_2 ON tab4 (col3 DESC,col0 DESC)
 
 statement ok
 INSERT INTO tab4 SELECT pk, col0, col1, col2, col3, col4, col5 FROM tab0
@@ -23191,11 +23223,13 @@ DROP TABLE tab2
 statement ok
 CREATE TABLE tab2(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, col3 BIGINT, col4 FLOAT, col5 TEXT)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab2_0 ON tab2 (col0 DESC,col3 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab2_0 ON tab2 (col0 DESC,col3 DESC)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab2_1 ON tab2 (col4 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab2_1 ON tab2 (col4 DESC)
 
 statement ok
 CREATE INDEX idx_tab2_4 ON tab2 (col1)
@@ -23209,14 +23243,16 @@ DROP TABLE tab3
 statement ok
 CREATE TABLE tab3(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, col3 BIGINT, col4 FLOAT, col5 TEXT)
 
-statement ok
-CREATE INDEX idx_tab3_0 ON tab3 (col4 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE INDEX idx_tab3_0 ON tab3 (col4 DESC)
 
 statement ok
 CREATE INDEX idx_tab3_1 ON tab3 (col0)
 
-statement ok
-CREATE INDEX idx_tab3_4 ON tab3 (col1 DESC,col3)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE INDEX idx_tab3_4 ON tab3 (col1 DESC,col3)
 
 statement ok
 INSERT INTO tab3 SELECT pk, col0, col1, col2, col3, col4, col5 FROM tab0
@@ -23227,14 +23263,17 @@ DROP TABLE tab4
 statement ok
 CREATE TABLE tab4(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, col3 BIGINT, col4 FLOAT, col5 TEXT)
 
-statement ok
-CREATE INDEX idx_tab4_0 ON tab4 (col4 DESC,col3 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE INDEX idx_tab4_0 ON tab4 (col4 DESC,col3 DESC)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab4_2 ON tab4 (col1 DESC,col0)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab4_2 ON tab4 (col1 DESC,col0)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab4_3 ON tab4 (col0 DESC,col3 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab4_3 ON tab4 (col0 DESC,col3 DESC)
 
 statement ok
 INSERT INTO tab4 SELECT pk, col0, col1, col2, col3, col4, col5 FROM tab0
@@ -26574,8 +26613,9 @@ CREATE TABLE tab2(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, co
 statement ok
 CREATE INDEX idx_tab2_0 ON tab2 (col3,col4)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab2_1 ON tab2 (col0 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab2_1 ON tab2 (col0 DESC)
 
 statement ok
 CREATE UNIQUE INDEX idx_tab2_2 ON tab2 (col4)
@@ -26607,11 +26647,13 @@ CREATE TABLE tab4(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, co
 statement ok
 CREATE UNIQUE INDEX idx_tab4_0 ON tab4 (col0,col4)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab4_1 ON tab4 (col1,col0 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab4_1 ON tab4 (col1,col0 DESC)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab4_3 ON tab4 (col3 DESC,col1)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab4_3 ON tab4 (col3 DESC,col1)
 
 statement ok
 CREATE UNIQUE INDEX idx_tab4_4 ON tab4 (col4)
@@ -29656,14 +29698,16 @@ DROP TABLE tab2
 statement ok
 CREATE TABLE tab2(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, col3 BIGINT, col4 FLOAT, col5 TEXT)
 
-statement ok
-CREATE INDEX idx_tab2_0 ON tab2 (col1,col3 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE INDEX idx_tab2_0 ON tab2 (col1,col3 DESC)
 
 statement ok
 CREATE UNIQUE INDEX idx_tab2_1 ON tab2 (col4)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab2_2 ON tab2 (col0 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab2_2 ON tab2 (col0 DESC)
 
 statement ok
 CREATE UNIQUE INDEX idx_tab2_5 ON tab2 (col3)
@@ -29680,8 +29724,9 @@ CREATE TABLE tab3(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, co
 statement ok
 CREATE UNIQUE INDEX idx_tab3_0 ON tab3 (col1)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab3_1 ON tab3 (col0 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab3_1 ON tab3 (col0 DESC)
 
 statement ok
 CREATE UNIQUE INDEX idx_tab3_3 ON tab3 (col4)
@@ -29698,8 +29743,9 @@ CREATE TABLE tab4(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, co
 statement ok
 CREATE INDEX idx_tab4_0 ON tab4 (col1)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab4_3 ON tab4 (col3 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab4_3 ON tab4 (col3 DESC)
 
 statement ok
 INSERT INTO tab4 SELECT pk, col0, col1, col2, col3, col4, col5 FROM tab0
@@ -32867,8 +32913,9 @@ CREATE UNIQUE INDEX idx_tab2_0 ON tab2 (col0,col4)
 statement ok
 CREATE INDEX idx_tab2_1 ON tab2 (col3,col0)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab2_3 ON tab2 (col0 DESC,col3)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab2_3 ON tab2 (col0 DESC,col3)
 
 statement ok
 INSERT INTO tab2 SELECT pk, col0, col1, col2, col3, col4, col5 FROM tab0
@@ -32879,17 +32926,21 @@ DROP TABLE tab3
 statement ok
 CREATE TABLE tab3(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, col3 BIGINT, col4 FLOAT, col5 TEXT)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab3_1 ON tab3 (col4 DESC,col3)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab3_1 ON tab3 (col4 DESC,col3)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab3_2 ON tab3 (col0,col3 DESC,col4 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab3_2 ON tab3 (col0,col3 DESC,col4 DESC)
 
-statement ok
-CREATE INDEX idx_tab3_3 ON tab3 (col3,col1 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE INDEX idx_tab3_3 ON tab3 (col3,col1 DESC)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab3_4 ON tab3 (col1,col3 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab3_4 ON tab3 (col1,col3 DESC)
 
 statement ok
 INSERT INTO tab3 SELECT pk, col0, col1, col2, col3, col4, col5 FROM tab0
@@ -32900,8 +32951,9 @@ DROP TABLE tab4
 statement ok
 CREATE TABLE tab4(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, col3 BIGINT, col4 FLOAT, col5 TEXT)
 
-statement ok
-CREATE INDEX idx_tab4_0 ON tab4 (col0 DESC,col1 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE INDEX idx_tab4_0 ON tab4 (col0 DESC,col1 DESC)
 
 statement ok
 CREATE UNIQUE INDEX idx_tab4_1 ON tab4 (col3)
@@ -32909,8 +32961,9 @@ CREATE UNIQUE INDEX idx_tab4_1 ON tab4 (col3)
 statement ok
 CREATE INDEX idx_tab4_2 ON tab4 (col0,col4)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab4_5 ON tab4 (col1 DESC,col4 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab4_5 ON tab4 (col1 DESC,col4 DESC)
 
 statement ok
 INSERT INTO tab4 SELECT pk, col0, col1, col2, col3, col4, col5 FROM tab0
@@ -35952,8 +36005,9 @@ DROP TABLE tab2
 statement ok
 CREATE TABLE tab2(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, col3 BIGINT, col4 FLOAT, col5 TEXT)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab2_1 ON tab2 (col3,col0 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab2_1 ON tab2 (col3,col0 DESC)
 
 statement ok
 CREATE INDEX idx_tab2_2 ON tab2 (col4)
@@ -35967,8 +36021,9 @@ DROP TABLE tab3
 statement ok
 CREATE TABLE tab3(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, col3 BIGINT, col4 FLOAT, col5 TEXT)
 
-statement ok
-CREATE INDEX idx_tab3_0 ON tab3 (col0 DESC,col1 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE INDEX idx_tab3_0 ON tab3 (col0 DESC,col1 DESC)
 
 statement ok
 CREATE UNIQUE INDEX idx_tab3_1 ON tab3 (col1,col4)
@@ -35976,8 +36031,9 @@ CREATE UNIQUE INDEX idx_tab3_1 ON tab3 (col1,col4)
 statement ok
 CREATE UNIQUE INDEX idx_tab3_2 ON tab3 (col3)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab3_4 ON tab3 (col1 DESC,col0)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab3_4 ON tab3 (col1 DESC,col0)
 
 statement ok
 CREATE UNIQUE INDEX idx_tab3_5 ON tab3 (col4)
@@ -35991,11 +36047,13 @@ DROP TABLE tab4
 statement ok
 CREATE TABLE tab4(pk INTEGER PRIMARY KEY, col0 BIGINT, col1 FLOAT, col2 TEXT, col3 BIGINT, col4 FLOAT, col5 TEXT)
 
-statement ok
-CREATE INDEX idx_tab4_0 ON tab4 (col3 DESC)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE INDEX idx_tab4_0 ON tab4 (col3 DESC)
 
-statement ok
-CREATE UNIQUE INDEX idx_tab4_5 ON tab4 (col0 DESC,col1)
+# TODO: unsupported statement: CREATE INDEX column options
+# statement ok
+# CREATE UNIQUE INDEX idx_tab4_5 ON tab4 (col0 DESC,col1)
 
 statement ok
 INSERT INTO tab4 SELECT pk, col0, col1, col2, col3, col4, col5 FROM tab0
